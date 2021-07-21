@@ -1,0 +1,61 @@
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+.h1,
+h2 .h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: normal;
+}
+
+h1,
+.h1 {
+  font-size: rem(32);
+}
+
+h2,
+.h2 {
+  font-size: rem(26);
+  margin-bottom: rem(16);
+}
+
+h3,
+.h3 {
+  font-size: rem(22);
+  margin-bottom: rem(16);
+}
+
+h4,
+.h4 {
+  font-size: rem(20);
+}
+
+@include respond-to("medium") {
+  h1,
+  .h1 {
+    font-size: rem(48);
+  }
+
+  h2,
+  .h2 {
+    font-size: rem(38);
+  }
+
+  h3,
+  .h3 {
+    font-size: rem(36);
+  }
+
+  h4,
+  .h4 {
+    font-size: rem(24);
+  }
+}

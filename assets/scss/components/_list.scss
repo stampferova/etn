@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding-left: rem(27);
+    line-height: 1.5;
+    margin-bottom: rem(18);
+    position: relative;
+  }
+
+  &--check &__item::before {
+    position: absolute;
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    top: rem(5);
+  }
+
+  &--order {
+    counter-reset: counter;
+  }
+
+  &--order &__item::before {
+    position: absolute;
+    counter-increment: counter;
+    content: counter(counter) ". ";
+    width: rem(16);
+    height: rem(16);
+    left: 0;
+    color: $orange-300;
+  }
+
+  @include respond-to("small") {
+    &__item {
+      padding-left: rem(47);
+      margin-bottom: rem(28);
+    }
+    &--check &__item::before {
+      width: rem(24);
+      left: rem(10);
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<article class="similar-article">
+    <div class="similar-article__content">
+        <h2 class="similar-article__title">
+            {{ article.title }}
+        </h2>
+        <p class="similar-article__perex">
+            {{ article.perex }}
+        </p>
+    </div>
+    <div class="similar-article__footer">
+        <div class="similar-article__date">
+           <time datetime="{{ article.time }}"> {{ article.date }}</time>
+        </div>
+        <a href="/" class="link similar-article__tag" >{{ article.hashtag }}</a>
+    </div>
+</article>

@@ -1,0 +1,50 @@
+{% set heros = [
+    {
+        title: 'Přidej se v Etneteře mezi kodéry',
+        text: 'Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.',
+        url: '/',
+        button: 'Více o nás',
+        img: 'img/hero.png',
+        alt: 'Hero image',
+        imgTitle: 'Join us image'
+    },
+    {
+        title: 'Lorem ipsum dolor sit amet consecte',
+        text: 'Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým.',
+        url: '/',
+        button: 'To mě zajímá',
+        img: 'img/building.png',
+        alt: 'Budova',
+        imgTitle: 'Building'
+    }
+] %}
+
+<section class="hero" >
+    <div class="container container--large splide" data-slider-hero>
+        <div class="splide__track">
+            <ul class="splide__list hero__list">
+            {% for hero in heros %}
+                <li class="splide__slide">
+                    <div class="hero__item">
+                        <div class="hero__wrapper">
+                            <div class="container">
+                                <h1 class="hero__title">{{ hero.title }}</h1>
+                                <p class="hero__text u-color-grey-300">
+                                    {{ hero.text }}
+                                </p>
+                                <div class="hero__button">
+                                    <a href="{{ hero.url }}" class="btn btn--outline">{{ hero.button }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__img">
+                            <div class="hero__bg"></div>
+                            <img src="{{ hero.img }}" alt="{{ hero.alt }}" title="{{ hero.imgTitle }}" />
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: rem(-30);
+
+  &__col {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding-left: rem(30);
+  }
+
+  @include respond-to("small") {
+    margin-left: rem(-60);
+
+    &__col {
+      padding-left: rem(60);
+    }
+
+    &__col--33 {
+      flex-basis: 33.33333333%;
+      max-width: 33.3333333%;
+    }
+
+    &__col--50 {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    &__col--100 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}

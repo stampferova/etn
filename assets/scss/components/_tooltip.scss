@@ -1,0 +1,41 @@
+.tooltip {
+  border-bottom: 1px dashed $primary;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#tooltip {
+  color: $white;
+  background: $grey-500;
+  padding: rem(5) rem(24);
+  font-weight: bold;
+  border-radius: rem(4);
+  font-size: rem(14);
+  display: none;
+}
+
+#tooltip[data-show] {
+  display: block;
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: rem(8);
+  height: rem(8);
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: "";
+  transform: rotate(45deg);
+}
+
+#tooltip[data-popper-placement^="top"] > #arrow {
+  bottom: -4px;
+}

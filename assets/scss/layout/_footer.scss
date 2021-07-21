@@ -1,0 +1,11 @@
+.footer {
+  text-align: center;
+  font-size: rem(14);
+
+  &__copy {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: rem(32);
+    font-size: rem(16);
+  }
+}

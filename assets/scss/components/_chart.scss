@@ -1,0 +1,76 @@
+.chart {
+  max-width: rem(538);
+  margin: 0 auto rem(30);
+
+  &__container {
+    max-width: rem(496);
+    height: rem(117);
+    margin-left: auto;
+    position: relative;
+  }
+
+  &__legend {
+    margin-top: rem(24);
+  }
+
+  &__label {
+    padding-left: rem(23);
+    position: relative;
+    font-size: rem(13);
+    margin-right: rem(24);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: rem(16);
+      height: rem(16);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background: $orange-100;
+    }
+
+    &:nth-child(2)::before {
+      background: $orange-200;
+    }
+
+    &:nth-child(3)::before {
+      background: $orange-400;
+    }
+  }
+
+  &__logo,
+  &__clock {
+    display: none;
+  }
+
+  @include respond-to("extra-small") {
+    &__legend {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: rem(36);
+    }
+  }
+
+  @include respond-to("small") {
+    margin-bottom: rem(70);
+
+    &__logo {
+      display: block;
+      position: absolute;
+      top: rem(20);
+      left: rem(-30);
+    }
+
+    &__clock {
+      display: block;
+      position: absolute;
+      left: rem(-25);
+      bottom: rem(10);
+    }
+  }
+}

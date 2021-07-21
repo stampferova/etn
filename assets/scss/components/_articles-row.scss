@@ -1,0 +1,12 @@
+.articles-row {
+  display: flex;
+  padding: rem(32) 0;
+  margin: 0 rem(-10);
+  flex-wrap: wrap;
+
+  @include respond-to("small") {
+    margin: 0 rem(-21);
+    flex-wrap: nowrap;
+    padding: rem(64) 0;
+  }
+}

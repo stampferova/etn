@@ -1,0 +1,28 @@
+.article {
+  padding: rem(24) 0;
+
+  &__heading {
+    margin: 0 0 rem(8);
+  }
+
+  &__img {
+    margin-right: rem(14);
+    margin-bottom: rem(14);
+    width: 100%;
+  }
+
+  @include respond-to("extra-small") {
+    &__img {
+      width: rem(280);
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to("small") {
+    padding: rem(52) 0;
+    &__img {
+      margin-right: rem(24);
+      width: auto;
+    }
+  }
+}

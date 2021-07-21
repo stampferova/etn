@@ -1,0 +1,142 @@
+.newsletter {
+  position: fixed;
+  bottom: rem(40);
+  right: rem(5);
+  height: rem(50);
+  width: rem(310);
+  z-index: 10;
+
+  &__close {
+    background-image: url("../img/cross.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: rem(12);
+    height: rem(12);
+    display: block;
+    margin-left: auto;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__form {
+    margin-right: rem(19);
+  }
+
+  &__btn {
+    margin-bottom: rem(12);
+    cursor: pointer;
+  }
+
+  &__perex {
+    font-size: rem(14);
+    color: $grey-200;
+    line-height: 1.29;
+    margin-right: rem(19);
+    display: inline-block;
+  }
+
+  &__content {
+    display: none;
+    background: $white;
+    padding: rem(10);
+    bottom: rem(80);
+    position: absolute;
+    right: rem(5);
+    box-shadow: 0.7px 1.9px 7px 0 rgba(0, 0, 0, 0.52);
+    width: rem(300);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: rem(14);
+      height: rem(14);
+      background: $white;
+      bottom: rem(-7);
+      transform: rotate(45deg);
+      right: rem(31);
+      box-shadow: 0.7px 1.9px 7px 0 rgb(0 0 0 / 52%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: rem(20);
+      height: rem(20);
+      background: $white;
+      bottom: rem(-6);
+      transform: rotate(45deg);
+      right: rem(28);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(10);
+    margin-top: rem(0);
+    font-weight: bold;
+  }
+
+  &__trigger {
+    width: rem(44);
+    height: rem(44);
+    display: block;
+    border-radius: 50%;
+    background: $danger;
+    background-image: url("../img/envelope.svg");
+    background-size: rem(22) rem(18);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    bottom: rem(25);
+    box-shadow: 0.7px 2px 7px 0 rgba(0, 0, 0, 0.52);
+    right: rem(20);
+    border: 0;
+    cursor: pointer;
+    transition: $animation-time all;
+
+    &:hover {
+      box-shadow: 0.7px 2px 7px 0 rgba(0, 0, 0, 0.82);
+    }
+  }
+
+  .is-open &__content {
+    display: block;
+  }
+
+  @include respond-to("extra-small") {
+    &__content {
+      width: rem(390);
+    }
+  }
+
+  @include respond-to("small") {
+    &__trigger {
+      right: rem(65);
+      bottom: rem(50);
+    }
+
+    &__content {
+      right: rem(60);
+      bottom: rem(108);
+      padding: rem(11) rem(11) rem(30) rem(30);
+
+      &::before {
+        right: rem(20);
+      }
+
+      &::after {
+        right: rem(17);
+      }
+    }
+
+    &__title {
+      margin-bottom: rem(22);
+      margin-top: unset;
+    }
+
+    &__btn {
+      margin-bottom: rem(30);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "base/index";
+@import "components/index";
+@import "layout/index";
+@import "utilities/index";
+
+html {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  margin: 0;
+  font-size: 16px;
+}
+
+main {
+  overflow: hidden;
+  padding-top: rem(50);
+
+  @include respond-to("medium") {
+    padding-top: rem(78);
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: rem(28);
+  margin-top: 0;
+}

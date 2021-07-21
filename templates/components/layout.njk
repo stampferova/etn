@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>Osikovska</title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+  </head>
+  <body>
+    {% include 'components/header.njk' %}
+    <main class="main" role="main">{% block content %}{% endblock %}
+    </main>
+
+    {% include 'components/footer.njk' %}
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

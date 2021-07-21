@@ -1,0 +1,84 @@
+.hero {
+  margin: 0 rem(-20);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0 rem(20);
+    width: 100%;
+    position: absolute;
+  }
+
+  &__item {
+    position: relative;
+    height: rem(360);
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+    margin-top: rem(30);
+    line-height: 1;
+  }
+
+  &__text {
+    max-width: rem(680);
+    font-size: rem(16);
+    line-height: 1.2;
+    margin-bottom: rem(30);
+  }
+
+  &__button {
+    text-align: right;
+    margin-bottom: rem(30);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      filter: grayscale(1);
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background: $white;
+    opacity: 0.8;
+    z-index: 1;
+    position: absolute;
+  }
+
+  @include respond-to("large") {
+    &__wrapper {
+      display: block;
+      padding: 0;
+    }
+
+    &__item {
+      height: rem(460);
+    }
+
+    &__title {
+      margin-bottom: rem(70);
+      margin-top: rem(100);
+    }
+
+    &__text {
+      font-size: rem(20);
+      margin-bottom: rem(60);
+    }
+  }
+}

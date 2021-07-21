@@ -1,0 +1,45 @@
+.splide {
+  &__arrow {
+    background: none;
+    height: rem(54);
+    width: rem(28);
+    opacity: 1;
+
+    svg {
+      height: rem(34);
+      width: rem(18);
+      fill: $black;
+    }
+
+    &:hover {
+      svg {
+        fill: $grey-400;
+      }
+    }
+  }
+
+  &__arrow--next {
+    right: rem(24);
+  }
+
+  &__arrow--prev {
+    left: rem(24);
+  }
+
+  @include respond-to("medium") {
+    &__arrow {
+      svg {
+        height: rem(54);
+        width: rem(28);
+      }
+    }
+
+    &__arrow--next {
+      right: rem(80);
+    }
+
+    &__arrow--prev {
+      left: rem(80);
+    }
+  }
+}

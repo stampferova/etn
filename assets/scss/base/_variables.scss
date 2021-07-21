@@ -1,0 +1,30 @@
+$black: #000;
+$primary: #e84d0f;
+$white: #fff;
+$danger: #ea1c0a;
+
+$orange-100: #ffc59b;
+$orange-200: #f88c6c;
+$orange-300: #e96934;
+$orange-400: #e64e21;
+
+$grey-100: #f2f2f2;
+$grey-200: #999;
+$grey-300: #262626;
+$grey-400: #1d1d1b;
+$grey-500: #464646;
+
+$container: 1028px;
+$container-large: 1338px;
+$container-padding: 20px;
+
+$animation-time: 300ms;
+
+$radius: 30px;
+
+$breakpoints: (
+  "extra-small": 425px,
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;

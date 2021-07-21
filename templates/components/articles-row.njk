@@ -1,0 +1,31 @@
+ {% set articles = [
+    {
+        date: '11.Ledna',
+        time: '2021-01-11',
+        title: 'Sdílení vědomostí',
+        perex: 'Inspirativní prostředí plné zajímavých lidí, které stojí za to poznat. Organizujeme pravidelné TechLunche, kdy nad lahodnou pizzou sdílíme naše nové poznatky a vědomosti.',
+        hashtag: '#etnplesk'
+    },
+    {
+        date: '12.Ledna',
+        time: '2021-01-12',
+        title: 'O lidi se staráme někdy víc než o klienty',
+        perex: 'Komfortní pracovní prostředí, které je unikátní kombinací kanceláří, tělocvičny, odpočinkových prostor a kavárny. U nás se strohé prostředí a nažehlené límečky fakt nenosí.',
+        hashtag: '#etnplesk'
+    },
+    {
+        date: '12.Ledna',
+        time: '2021-01-12',
+        title: 'Jaké u nás dostaneš benefity?',
+        perex: 'Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a penzijní pojištění.',
+        hashtag: '#etnplesk'
+    }
+] %}
+
+<section class="container">
+    <div class="articles-row">
+        {% for article in articles %}
+            {% include 'components/similar-article.njk' %}
+        {% endfor %}
+    </div>
+</section>

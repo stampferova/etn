@@ -1,0 +1,43 @@
+.btn {
+  display: inline-block;
+  font-size: rem(16);
+  color: $white;
+  padding: rem(10) rem(30);
+  border-radius: $radius;
+  border: 1px solid transparent;
+  transition: $animation-time background;
+  line-height: 1;
+  text-decoration: none;
+
+  &:focus-visible,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background: darken($primary, 5%);
+      color: $white;
+    }
+  }
+
+  &--outline {
+    color: $primary;
+    background: $white;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background: $grey-100;
+    }
+  }
+
+  @include respond-to("small") {
+    padding: rem(13) rem(80);
+  }
+}
