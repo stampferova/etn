@@ -18,6 +18,10 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__form {
@@ -97,6 +101,10 @@
 
     &:hover {
       box-shadow: 0.7px 2px 7px 0 rgba(0, 0, 0, 0.82);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
